@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Responsivo con Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <!-- Contenedor Principal -->
+    <div class="flex items-center justify-center min-h-[calc(100vh-56px)] px-4">
+        <!-- Tarjeta del Formulario -->
+        <div
+            class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 w-full max-w-4xl">
+
+            <!-- Lado Izquierdo (Formulario) -->
+            <div class="flex flex-col justify-center p-8 md:p-14 md:w-1/2">
+                <span class="mb-3 text-4xl font-bold">Crea tu cuenta</span>
+                <span class="font-light text-gray-500 mb-8">Completa el formulario para
+                    registrarte.</span>
+                <form action="#" class="flex flex-col space-y-4" id="dataForm">
+
+                    <!-- Campos de Nombre -->
+                    <div class="space-y-4 md:space-y-0 md:flex md:space-x-4">
+
+                        <!-- Nombre -->
+                        <div class="flex flex-col space-y-2 md:w-1/2">
+                            <label for="firstName" class="text-md font-light">Nombre</label>
+                            <input type="text"
+                                class="w-full p-2 bg-white border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-900"
+                                name="firstName" id="firstName" placeholder="Ingresa tu nombre" required />
+                        </div>
+
+                        <!-- Apellido -->
+                        <div class="flex flex-col space-y-2 md:w-1/2">
+                            <label for="lastName" class="text-md font-light">Apellido</label>
+                            <input type="text"
+                                class="w-full p-2 bg-white border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-900"
+                                name="lastName" id="lastName" placeholder="Ingresa tu apellido" required />
+                        </div>
+                    </div>
+
+                    <!-- País -->
+                    <div class="flex flex-col space-y-2">
+                        <label for="country" class="text-md font-light">País</label>
+                        <select name="country" id="country"
+                            class="w-full p-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-900"
+                            required>
+                            <option value="">Selecciona tu país</option>
+                            <option value="AR">Argentina</option>
+                            <option value="MX">México</option>
+                            <option value="CO">Colombia</option>
+                            <option value="ES">España</option>
+                        </select>
+                    </div>
+                    <!-- Email -->
+                    <div class="flex flex-col space-y-2">
+                        <label for="email" class="text-md font-light">Email</label>
+                        <input type="email"
+                            class="w-full p-2 bg-white border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-900"
+                            name="email" id="email" placeholder="email@dominio.com" required />
+                    </div>
+
+                    <!-- Contraseña -->
+                    <div class="flex flex-col space-y-2">
+                        <label for="password" class="text-md font-light">Contraseña</label>
+                        <input type="password"
+                            class="w-full p-2 bg-white border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-900"
+                            name="password" id="password" placeholder="Ingresa tu contraseña" required />
+                    </div>
+
+                    <!-- Términos y Condiciones -->
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" name="terms" id="terms"
+                            class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                            required />
+                        <label for="terms" class="text-sm font-light text-gray-600">
+                            Acepto los <a href="#" class="font-medium text-blue-600 hover:underline">Términos y
+                                Condiciones</a>.
+                        </label>
+                    </div>
+                    <!-- Botón de Envío -->
+                    <button type="submit"
+                        class="w-full bg-black text-white p-2 rounded-lg mt-4 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-opacity-50">
+                        Registrarse
+                    </button>
+                </form>
+            </div>
+
+            <!-- Lado Derecho (Imagen) -->
+            <div class="relative hidden md:block md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+                    alt="Imagen de registro" class="w-full h-full rounded-r-2xl object-cover" />
+            </div>
+        </div>
+    </div>
+
+    <!-- custom footer -->
+    <div class="absolute bottom-0 w-screen h-8 flex justify-center bg-gray-100 text-center">
+        <p>By <span class="font-bold">Matias Orellana</span> for 2do FullStack @ <span class="font-bold">ITS Cipolletti</span> 2025</p>
+    </div>
+
+</body>
+
+</html>
+
+</html>
